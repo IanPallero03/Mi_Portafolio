@@ -96,7 +96,7 @@ h3 {
  padding: 0.8rem;
 }
 @media (max-width: 400px) {
-  .h3 {
+  h3 {
     width: 70%;
     margin-top: 1rem;
   }
@@ -249,13 +249,6 @@ nav li:hover{
   box-shadow: 0 0 12px #00ffee, 0 0 30px #00ffee80;
 
 }
-@media (max-width: 400px) {
-  .imagen2 {
-    width: 70%;
-    margin-top: 1rem;
-  }
-}
-
 
 
 .centrado {
