@@ -1,4 +1,3 @@
-
 .encabezado {
   display: flex;
   flex-direction: column;
@@ -365,6 +364,7 @@ nav li:hover{
 .cube.detener-animacion {
   animation: none;
 }
+
 .selector-habilidades {
   display: flex;
   flex-wrap: wrap;
