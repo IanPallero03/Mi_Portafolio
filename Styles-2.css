@@ -91,7 +91,7 @@ h4 {
 
 
 .descripcion-habilidades {
-  color: red;
+  color: white;
   text-align: center;
   font-size: 2rem;
   margin-bottom: 1.5rem;
@@ -306,7 +306,7 @@ nav li:hover{
   gap: 2rem;
   padding: 0rem;
   text-align: center;
-  color: black;
+  color: red;
 }
 
 .habilidades-lista i {
