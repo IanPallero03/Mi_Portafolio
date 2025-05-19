@@ -95,7 +95,12 @@ h3 {
  margin-bottom: 0.6rem;
  padding: 0.8rem;
 }
-
+@media (max-width: 400px) {
+  .imagen2 {
+    width: 50%;
+    margin-top: 1rem;
+  }
+}
 
 span{
 	display: block;
