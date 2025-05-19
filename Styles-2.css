@@ -59,12 +59,7 @@ h4 {
   }
 }
 
-.separador {
-  border: 0;
-  height: 1px;
-  background: linear-gradient(to right, transparent, #fff, transparent);
-  margin: 40px 0;
-}
+
 .contenido-bien,.botones-contacto, .selector-habilidades {
   opacity: 0;
   transform: translateY(30px);
