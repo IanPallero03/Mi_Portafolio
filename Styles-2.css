@@ -283,7 +283,7 @@ nav li:hover{
 .Secciones {
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 40px;
 
   
 }
@@ -310,7 +310,7 @@ nav li:hover{
 }
 
 .habilidades-lista i {
-  font-size: 5rem;
+  font-size: 15rem;
   
 }
 
