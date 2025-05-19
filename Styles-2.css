@@ -1,0 +1,680 @@
+
+.encabezado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0rem;
+
+}
+:root {
+  --gris: #757575;
+  --blanco: #ffffff;
+  --primario: #4CAF50;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+h4 {
+  display: inline-block;
+  overflow: hidden;
+  margin-top: 1.5rem;
+  animation: anim 5s linear forwards;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+
+}
+
+@keyframes anim{
+  0%{
+    width: 0;
+    height: 0;
+  }
+  30%{
+    width: 50%;
+    height: 0;
+  }
+  60%{
+    width: 20vw;
+    height: 10vw;
+  }
+  80%{
+    width: 20vw;
+    height: 10vw;
+  }
+  100%{
+    width: 20vw;
+    height: 10vw;
+  }
+}
+
+/* Adaptado a celulares */
+@media (max-width: 768px) {
+  h4 {
+    font-size: 3vw;
+    width: 50vw;
+    animation: none; /* o podés crear otra animación distinta para móvil */
+  }
+}
+
+.separador {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #fff, transparent);
+  margin: 40px 0;
+}
+.contenido-bien,.botones-contacto, .selector-habilidades {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: aparecer 4s forwards;
+}
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#video-fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+   /* Para no distraer */
+}
+
+
+.descripcion-habilidades {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  }
+.habilidad {
+  position: relative;
+}
+
+.habilidad::after {
+  content: attr(data-descripcion);
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  white-space: pre-line;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  width: max-content;
+  max-width: 200px;
+  text-align: center;
+  font-size: 0.85rem;
+  z-index: 10;
+}
+
+.habilidad:hover::after {
+  opacity: 1;
+  transition: all 3s ease;
+}
+
+
+
+span{
+  display: block;
+  font-family: monospace;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 20ch;
+  font-size: clamp(1.7rem, 10vw, 1rem);
+  text-align:center;
+ color: white;
+
+  animation: typing 4s steps(20), blink .5s infinite step-end alternate;
+  overflow: hidden;
+}
+.span-2{
+  display: block;
+  font-family: monospace;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 28ch;
+  text-align: center;
+
+  animation: typing 4s steps(28), blink .5s infinite step-end alternate;
+  overflow: hidden;
+}
+
+@keyframes typing{
+  from {width: 0;}
+}
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+
+#idioma-btn {
+  position: fixed;
+  top: 4rem;
+  right: 0.8rem;
+  padding: 0.2rem 0.5rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+
+#idioma-btn:hover {
+  transform: scale(1.05);
+  transition: background-color 0.5s ease, transform 0.5s ease;
+
+}
+
+
+.menu-toggle {
+  display: none;
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content:right;
+  text-align: center;
+  
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: transparent;
+    margin-top: 0.3rem;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
+nav ul {
+
+    background-color: rgba(255, 255, 255, 0.2); /* transparente */
+    backdrop-filter: blur(5px);               /* borroso */
+   -webkit-backdrop-filter: blur(10px);       /* compatibilidad con Safari */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0.1rem 4rem;
+    margin: 0;
+  background-color: transparent;
+  width: 100%;
+  list-style-type: none;
+  text-align: left; 
+
+}
+nav li {
+  display: inline-flex;
+}
+nav a {
+  transition: color 0.3s, border-bottom 0.3s;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  width: 95px;
+
+}
+nav li:hover{
+  background-color: transparent;
+}
+
+.nav a:hover {
+  color: #00ffee;
+  border-bottom: 2px solid #00ffee;
+}
+
+.contenido-bien {
+  max-width: 700px;
+}
+
+@media (max-width: 768px) {
+  .Contenido {
+    flex-direction: column;
+
+  }
+  .Articulos {
+    width: 35%;
+    border-right: none;
+  }
+}
+
+
+.Contenido {
+  display: flex;
+  margin: 65px;
+}
+
+.Secciones {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+
+  
+}
+.icono {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Colores reales */
+.python { color: #3776AB; }    /* Azul Python */
+.cpp { color: #00599C; }       /* Azul C++ */
+.html { color: #E34F26; }      /* Naranja HTML */
+.css { color: #1572B6; }       /* Azul CSS */
+.mysql { color: #4479A1; }     /* Azul MySQL */
+.github { color: #000000; }    /* Negro GitHub */
+
+.habilidades-lista {
+  list-style: none;
+  gap: 2rem;
+  padding: 0rem;
+  text-align: center;
+  color: black;
+}
+
+.habilidades-lista i {
+  font-size: 5rem;
+  
+}
+
+.animation-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 400px;
+  height: 400px;
+  perspective: 1000px;
+  border: 1px solid transparent;
+}
+.cube{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: cubeRotate 15s infinite linear;
+
+}
+.cube-face{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.2);
+  border: 2px solid var(--secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  backdrop-filter:blur(5px);
+  box-shadow: 0 0 10px #00ffee;
+}
+.front{transform: translateZ(100px);}
+.back {transform: translateZ(-100px) rotateY(180deg);}
+.right{transform: rotateY(90deg) translateZ(100px);}
+.left{ transform: rotateY(-90deg) translateZ(100px); }
+.top{ transform:rotateX(90deg) translateZ(100px); }
+.bottom{ transform: rotateX(-90deg) translateZ(100px); }
+
+@keyframes cubeRotate {
+  0% {transform: rotateX(0) rotateY(0) rotateZ(0);}
+  100%{transform: rotateX(360deg) rotateY(720deg) rotateZ(360deg);}
+}
+.cube {
+  animation: cubeRotate 15s infinite linear;
+  transition: transform 1s ease;
+}
+
+.cube.detener-animacion {
+  animation: none;
+}
+.selector-habilidades {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.selector-habilidades {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.contenedor-habilidades {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+
+.habilidad {
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  color: black;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.habilidad:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Colores por habilidad */
+.habilidad.python { background-color: #306998; }
+.habilidad.cpp { background-color: #5e97d0; }
+.habilidad.html { background-color: #e44d26; }
+.habilidad.css { background-color: #264de4; }
+.habilidad.mysql { background-color: #00758f; }
+.habilidad.github { background-color: #333; }
+
+
+.reiniciar-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.reiniciar-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.reiniciar-btn:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+
+
+.formulario {
+    background-color: #1e1e1e;
+    width: min(25rem, 80%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 2rem;
+   
+
+}
+
+.formulario fieldset {
+    border: none;
+    opacity: 0;
+  transform: translateY(30px);
+  animation: aparecer 4s forwards;
+}
+.formulario legend {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: aparecer 4s forwards;
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #26a69a;
+    
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .contenedor-campos {
+        display: grid;
+        grid-template-columns: 40% 50%;
+        grid-template-rows: auto auto 20rem;
+        column-gap: 1rem;
+    
+    }
+    .campo:nth-child(3),
+    .campo:nth-child(4) {
+        grid-column: 1 / 3;
+
+    }
+}
+.campo {
+    margin-bottom: 1rem;
+
+}
+.campo label {
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .1rem;
+    display: block;
+
+}
+.campo textarea{
+    height: 10rem;
+}
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 0.5rem;
+    border-radius: .5rem;
+}
+.boton-enviar {
+  background-color: #26a69a;
+  color: white;
+  padding: 2px 20px; /* Más alto y más ancho */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px; /* Texto más grande */
+  transition: background-color 0.3s ease;
+  width: 50%;
+  max-width: 300px; /* Para que no sea demasiado grande */
+}
+
+
+/* Esta clase alinea el botón a la derecha */
+.alinear-derecha {
+  display: flex;
+  justify-content: flex-end;
+}
+ .boton-enviar, .menu-toggle,
+ .Secciones, .campo  {
+  transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+ .boton-enviar:hover {
+  background-color: transparent;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.Secciones:hover, .campo:hover {
+  background-color: transparent;
+ 
+  transform: scale(1.05);
+}
+ .menu:hover {
+  background-color: transparent;
+  color: white;
+  transform: scale(1.0);
+  }
+
+/* Estilo del botón */
+
+
+.modo-boton {
+  position: fixed;
+  top: 2.1rem;
+  right: 1rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  z-index: 1000;
+  color: #888888;
+  transition: transform 0.2s ease;
+}
+
+.modo-boton:hover {
+  transform: scale(1.1);
+}
+
+/* Modo Día (por defecto) */
+body  .modo-boton{
+  color: #888888;
+  transition: all 4s ease;
+}
+body .formulario {
+  transition: all 4s ease;
+}
+body .menu li a{
+  transition: all 4s ease;
+}
+body .menu-toggle{
+  transition: all 4s ease;
+}
+body .habilidad{
+  color: white;
+  transition: all 4s ease;
+}
+body .reiniciar-btn{
+  background-color: #26a69a;
+  transition: all 4s ease;
+}
+
+/* Modo Noche */
+body.noche .modo-boton{
+  color: white;
+  transition: all 4s ease;
+}
+body.noche  {
+  background-color: #121212;
+  color: white;
+  transition: all 4s ease;
+}
+body.noche .reiniciar-btn{
+   color: white;
+  transition: all 4s ease;
+}
+
+body.noche nav   {
+  color: #00ffee;
+  transition: color 0.3s, border-bottom 0.3s;
+  background-color: var(--gris);
+  transition: all 4s ease;
+}
+
+body.noche .formulario {
+  background-color: var(--gris);
+  transition: all 4s ease;
+}
+
+body.noche .menu li a{
+  color: white;
+  transition: all 4s ease;
+}
+body.noche .menu-toggle{
+  color: white;
+  transition: all 4s ease;
+}
+
+.botones-contacto {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.botones-contacto a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.3s;
+}
+
+.botones-contacto .whatsapp {
+  background-color: #25D366;
+}
+
+.botones-contacto .gmail-icon {
+  background-color: #0072C6;
+}
+
+.botones-contacto a:hover {
+  transform: scale(1.1);
+}
+.gmail-icon img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+
+.gmail-icon img:hover {
+  transform: scale(1.1);
+}
+
+
+footer {
+  width: 100%;
+  height:200px;
+  color: white;
+  margin-top: 40px;
+}
+footer p {
+  text-align: center;
+  padding: 20px;
+}

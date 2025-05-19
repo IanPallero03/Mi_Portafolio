@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página Personal</title>
+  <link rel="stylesheet" type="text/css" href="Styles-2.css">
+</head>
+
+<body>
+  <button id="idioma-btn">English</button>
+  <div class="encabezado">
+<video autoplay muted loop id="video-fondo">
+  <source src="videos/video_fondo.mp4"  type="video/mp4">
+  Tu navegador no soporta video HTML5.
+</video>
+
+</div>
+  
+  <nav class="nav">
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+    <ul id="menu" class="menu">
+
+      <li><a class="es" href="Index.html">Presentación</a></li>
+      <li><a class="en" href="Index.html" style="display: none;">Presentation</a></li>
+
+      <li><a class="es" href="index-2.html">Habilidades</a></li>
+      <li><a class="en" href="index-2.html" style="display: none;">Skills</a></li>
+
+      <li><a class="es" href="index-3.html">Sobre Mí</a> </li>
+      <li><a class="en" href="index-3.html" style="display: none;">About me</a></li>
+
+        <li><a class="es"href="#Contacto">Contacto</a></li>
+        <li><a class="en" href="#Contacto" style="display: none;">Contact</a></li>
+
+    </ul>
+    <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    toggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+     });
+</script>
+
+<button id="modo-btn" class="modo-boton">
+  <div class="material-icons">dark_mode</div>
+</button>
+
+  <script>
+  const botonModo = document.getElementById('modo-btn');
+  const icono = botonModo.querySelector('.material-icons');
+  const body = document.body;
+
+  botonModo.addEventListener('click', () => {
+    body.classList.toggle('noche');
+
+    // Cambiar el ícono
+    if (body.classList.contains('noche')) {
+      icono.textContent = "wb_sunny"; // ☀️
+    } else {
+      icono.textContent = "dark_mode"; // 🌙
+    }
+  });
+</script>
+ 
+  </nav>
+  <section id="Presentación"></section>
+  <section id="Habilidades"></section>
+  <section id="Sobre Mí"></section>
+  <div class="Contenido">
+       <div class="Articulos"> 
+       <div class="Secciones centrado"> 
+        <div class="contenedor-habilidades">
+         <div class="contenido-bien">
+
+           <span class="es">¡Mis Habilidades!<i class="fa-regular fa-hand-peace saludo"></i></span><span class="en" style="display: none;">¡My Skills! <i class="fa-regular fa-hand-peace saludo"></i></span>
+             
+              
+        <ul class="habilidades-lista">
+    <div class="animation-container">
+    <div class="cube">
+
+
+      <div class="cube-face front"><li><i class="fa-brands fa-python icono python"></i> Python</li></div>
+      <div class="cube-face back"><li><i class="fa-solid fa-code icono cpp"></i> C++</li></div>
+      <div class="cube-face right"><li><i class="fa-brands fa-html5 icono html"></i> HTML</li></div>
+      <div class="cube-face left"><li><i class="fa-brands fa-css3-alt icono css"></i> CSS</li></div>
+      <div class="cube-face top"><li><i class="fa-brands fa-github icono github"></i> GitHub</li></div>
+      <div class="cube-face bottom"><li><i class="fa-solid fa-database icono mysql"></i> MySQL</li></ul></div>
+      
+
+        <div class="selector-habilidades">
+
+  <!-- Python -->
+  <button class="habilidad python es" data-face="front" data-descripcion="Automatización de tareas, scripting y desarrollo de lógica de backend con buen dominio de estructuras de control.">
+    <i class="fa-brands fa-python"></i> Python
+  </button>
+
+  <button class="habilidad python en" style="display: none;" data-face="front" data-descripcion="Task automation, scripting, and backend logic development using Python.">
+    <i class="fa-brands fa-python"></i> Python
+  </button>
+
+  <!-- C++ -->
+  <button class="habilidad cpp es" data-face="back" data-descripcion="Manejo de programación estructurada y orientación a objetos. Uso en lógica, algoritmos y rendimiento.">
+    <i class="fa-solid fa-code"></i> C++
+  </button>
+  <button class="habilidad cpp en" style="display: none;" data-face="back" data-descripcion="Structured programming and object-oriented design. Used for logic, algorithms and performance.">
+    <i class="fa-solid fa-code"></i> C++
+  </button>
+
+  <!-- HTML -->
+  <button class="habilidad html es" data-face="right" data-descripcion="Construcción de estructuras web accesibles y semánticas con HTML5.">
+    <i class="fa-brands fa-html5"></i> HTML
+  </button>
+  <button class="habilidad html en" style="display: none;" data-face="right" data-descripcion="Accessible and semantic web structure with HTML5.">
+    <i class="fa-brands fa-html5"></i> HTML
+  </button>
+
+  <!-- CSS -->
+  <button class="habilidad css es" data-face="left" data-descripcion="Estilización de sitios con CSS3, uso de flexbox, grid y diseño responsivo.">
+    <i class="fa-brands fa-css3-alt"></i> CSS
+  </button>
+  <button class="habilidad css en" style="display: none;" data-face="left" data-descripcion="Styling websites with CSS3, including flexbox, grid and responsive layout.">
+    <i class="fa-brands fa-css3-alt"></i> CSS
+  </button>
+
+  <!-- MySQL -->
+  <button class="habilidad mysql es" data-face="top" data-descripcion="Diseño y consulta de bases de datos relacionales. Uso de SQL para manipular datos.">
+    <i class="fa-solid fa-database"></i> MySQL
+  </button>
+  <button class="habilidad mysql en" style="display: none;" data-face="top" data-descripcion="Design and querying of relational databases. Use of SQL for data handling.">
+    <i class="fa-solid fa-database"></i> MySQL
+  </button>
+
+  <!-- GitHub -->
+  <button class="habilidad github es" data-face="bottom" data-descripcion="Gestión de versiones y colaboración en proyectos usando Git y GitHub.">
+    <i class="fa-brands fa-github"></i> GitHub
+  </button>
+  <button class="habilidad github en" style="display: none;" data-face="bottom" data-descripcion="Version control and project collaboration using Git and GitHub.">
+    <i class="fa-brands fa-github"></i> GitHub
+  </button>
+
+
+    <h4 class="descripcion-habilidades es">
+  Estas son algunas de las tecnologías con las que he trabajado y continúo aprendiendo.
+</h4>
+<h4 class="descripcion-habilidades en" style="display: none;">
+  These are some of the technologies I've worked with and continue learning.
+</h4>
+</div>
+  </div>
+
+      </div>
+
+      </div>
+  </div>
+      
+    </div>
+  </div>
+    <div class="reiniciar-container">
+  <button id="reiniciar-btn" class="reiniciar-btn" >
+    <i class="es" > Reiniciar rotación</i><i class="en" style="display: none;">Restart rotation</i>
+  </button>
+
+</div>
+
+<script>
+  const cube = document.querySelector(".cube");
+  const botones = document.querySelectorAll("[data-face]");
+
+  const rotaciones = {
+    front: "rotateX(0deg) rotateY(0deg)",
+    back: "rotateX(0deg) rotateY(180deg)",
+    right: "rotateX(0deg) rotateY(-90deg)",
+    left: "rotateX(0deg) rotateY(90deg)",
+    top: "rotateX(90deg) rotateY(0deg)",
+    bottom: "rotateX(-90deg) rotateY(0deg)"
+  };
+
+  botones.forEach(boton => {
+    boton.addEventListener("click", () => {
+      const cara = boton.getAttribute("data-face");
+      cube.classList.add("detener-animacion");
+      cube.style.transform = rotaciones[cara];
+    });
+  });
+</script>
+
+
+
+<script>
+  document.getElementById("reiniciar-btn").addEventListener("click", () => {
+    const cube = document.querySelector(".cube");
+    cube.classList.remove("detener-animacion");
+    cube.removeAttribute("style"); // Quita rotación manual
+  });
+</script>
+
+<hr class="separador">
+
+<script>
+  const btn = document.getElementById("idioma-btn");
+
+btn.addEventListener("click", () => {
+  const isEnglish = btn.textContent === "English";
+
+  // Cambiar textos visibles (clases .es y .en)
+  document.querySelectorAll(".en").forEach(el => el.style.display = isEnglish ? "block" : "none");
+  document.querySelectorAll(".es").forEach(el => el.style.display = isEnglish ? "none" : "block");
+
+  // Cambiar los títulos de los botones de contacto
+  document.querySelectorAll(".whatsapp, .gmail-icon").forEach(el => {
+    const titleEs = el.getAttribute("data-title-es");
+    const titleEn = el.getAttribute("data-title-en");
+    el.setAttribute("title", isEnglish ? titleEn : titleEs);
+  });
+
+  // Cambiar texto del botón
+  btn.textContent = isEnglish ? "Spanish" : "English";
+});
+</script>
+
+
+  <footer>
+  <section>
+
+    <form id="formulario-contacto" class="formulario" action="#" method="post">
+      <script>
+    const formulario = document.getElementById('formulario-contacto');
+
+    formulario.addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert("✅ Tu mensaje fue enviado");
+    formulario.reset(); 
+  });
+</script>
+      <fieldset>
+        <legend class="es" >Contactame llenando los siguientes campos</legend>
+        <legend class="en" style="display: none;">Contact me by filling out the following fields</legend>
+
+        <section id="Contacto">
+
+        <div class="contenedor-campos">
+          <div class="campo">
+
+            <label class="es">Nombre</label>
+            <label class="en" style="display: none;">Name</label>
+
+            <input class="input-text" type="Nombre" placeholder="Tu Nombre / Your Name">
+
+          </div>
+
+          <div class="campo">
+
+              <label class="es">Numero de telefono</label>
+            <label class="en" style="display: none;">Phone number</label>
+
+            <input class="input-text" type="tel" placeholder="Tu numero / Your number">
+
+          </div>
+
+          <div class="campo">
+
+            <label class="es">Correo</label>
+            <label class="en" style="display: none;">Mail</label>
+
+            <input class="input-text" type="email" placeholder="Tu Correo / Your Mail">
+
+          </div>
+
+          <div class="campo">
+
+            <label class="es">Mensaje</label>
+            <label class="en" style="display: none;">Message</label>
+
+            <textarea class="input-text"></textarea> 
+
+          </div>
+          
+        </div>
+        <div class="alinear-derecha">
+
+          <button type="submit" class="boton-enviar" >Enviar / Send</button>
+          
+        </div>
+
+      </fieldset>
+      <!-- Botones de contacto flotantes -->
+<!-- Botones de contacto flotantes -->
+<div class="botones-contacto">
+  <a href="https://wa.me/3425376255" class="whatsapp"
+     data-title-es="Enviar WhatsApp"
+     data-title-en="Send WhatsApp"
+     title="Enviar WhatsApp"
+     target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <a href="mailto:ianpallero@gmail.com" class="gmail-icon"
+     data-title-es="Enviar Correo"
+     data-title-en="Send Email"
+     title="Enviar correo"
+     target="_blank">
+     <i class="fa-solid fa-envelope"></i>
+  </a>
+</div>
+
+    </form>
+  </section>
+  <p class="es">© Copyright Ian Marco Pallero. Todos los derechos reservados.</p>
+  <p class="en" style="display: none;">© Copyright Ian Marco Pallero. All rights reserved.</p>
+
+
+</footer>
+<script>
+ 
+
+</body>
+</html>
