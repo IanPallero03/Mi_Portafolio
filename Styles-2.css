@@ -1,3 +1,4 @@
+
 .encabezado {
   display: flex;
   flex-direction: column;
@@ -58,13 +59,13 @@ h4 {
     animation: none; /* o podés crear otra animación distinta para móvil */
   }
 }
+
 .separador {
   border: 0;
   height: 1px;
   background: linear-gradient(to right, transparent, #fff, transparent);
   margin: 40px 0;
 }
-
 .contenido-bien,.botones-contacto, .selector-habilidades {
   opacity: 0;
   transform: translateY(30px);
@@ -370,7 +371,7 @@ nav li:hover{
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 .selector-habilidades {
   max-width: 800px;
@@ -666,6 +667,52 @@ body.noche .menu-toggle{
 .gmail-icon img:hover {
   transform: scale(1.1);
 }
+
+
+@media (max-width: 768px) {
+  .Contenido {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin: 0;
+  }
+
+  .Articulos {
+    width: 100%;
+  }
+
+  .contenedor-habilidades {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .animation-container {
+    width: 300px;
+    height: 300px;
+  }
+
+
+  .habilidad {
+    width: auto;
+    min-width: 140px;
+    max-width: 200px;
+    font-size: 0.95rem;
+    margin: 0.3rem auto;
+  }
+
+  .descripcion-habilidades {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  
+  .reiniciar-btn {
+    max-width: 250px;
+    font-size: 1rem;
+    margin: 0 auto;
+  }
 
 
 footer {
