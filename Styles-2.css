@@ -134,7 +134,7 @@ span{
   white-space: nowrap;
   border-right: 4px solid;
   width: 20ch;
-  font-size: clamp(1.7rem, 10vw, 1rem);
+  font-size: clamp(1.5rem, 10vw, 1rem);
   text-align:center;
  color: white;
 
