@@ -138,7 +138,7 @@ span{
 }
 @media (max-width: 768px) {
 	span{
-		font-size: clamp(1.4rem, 10vw, 1rem);
+		font-size: clamp(1.2rem, 10vw, 1rem);
 	}
 }
 
