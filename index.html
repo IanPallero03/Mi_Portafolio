@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mi Portafolio</title>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+
+<body>
+  <div id="inicio"></div>
+  <a href="#inicio" class="flecha-arriba">&uarr;</a>
+  <!-- SECCION VIDEO FONDO -->
+
+	<button id="idioma-btn">English</button>
+	<div class="encabezado">
+    <video autoplay muted loop id="video-fondo">
+  <source src="videos/Video Fondo.mp4" type="video/mp4">
+  Tu navegador no soporta video HTML5.
+</video>
+</div>
+
+</div>
+  <!-- SECCION MENU TOGGLE Y NAV -->
+	
+	<nav class="nav">
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+    <ul id="menu" class="menu">
+
+			<li><a class="es" href="#Presentación">Presentación </a></li>
+			<li><a class="en" href="#Presentación" style="display: none;">Presentation</a></li>
+
+			<li><a class="es" href="#Habilidades">Habilidades</a></li>
+			<li><a class="en" href="#Habilidades" style="display: none;">Skills</a></li>
+
+      <li><a class="es" href="#Proyectos">Proyectos</a> </li>
+			<li><a class="en" href="#Proyectos" style="display: none;">Proyects</a></li>
+
+      <li><a class="es" href="#Sobre Mí">Sobre Mí</a> </li>
+			<li><a class="en" href="#Sobre Mí" style="display: none;">About me</a></li>
+
+		    <li><a class="es"href="#Contacto">Contacto</a></li>
+		    <li><a class="en" href="#Contacto" style="display: none;">Contact</a></li>
+
+		</ul>
+		<script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    toggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+     });
+</script>
+
+
+  <!-- SECCION DE NOCHE/DIA -->
+
+<button id="modo-btn" class="modo-boton">
+  <div class="material-icons">dark_mode</div>
+</button>
+
+	<script>
+  const botonModo = document.getElementById('modo-btn');
+  const icono = botonModo.querySelector('.material-icons');
+  const body = document.body;
+
+  botonModo.addEventListener('click', () => {
+    body.classList.toggle('noche');
+
+    // Cambiar el ícono
+    if (body.classList.contains('noche')) {
+      icono.textContent = "wb_sunny"; // ☀️
+    } else {
+      icono.textContent = "dark_mode"; // 🌙
+    }
+  });
+</script>
+
+  <!--SECCION PRESENTACION -->
+ 
+
+	</nav>
+	<section id="Presentación">
+	<div class="Contenido animado">
+		   <div class="Articulos"> 
+			 <div class="Secciones centrado">	
+			   <div class="contenido-bien">
+	
+			     <span class="es">¡Hola, Soy Ian Pallero! <i class="fa-regular fa-hand-peace saludo"></i></span><span class="en" style="display: none;">¡Hello, I'm Ian Pallero!</span>
+
+			     <div class="imagen2"></div>
+			     <div class="contenedor-h4">
+					<h4 class="es">Desarrollador Web.</h4>
+          <h4 class="en" style="display: none;">Developer Web.</h4>
+          </div>
+
+          <h3 class="es">Aprendizaje rápido y autónomo.</h3>
+          <h3 class="es">Buen trabajo en equipo.</h3>
+          <h3 class="es">Ganas de mejorar y crecer en el mundo IT.</h3>
+          <h3 class="en" style="display:none;">Fast and self-driven learner.</h3>
+          <h3 class="en" style="display:none;">Great team collaboration.</h3>
+          <h3 class="en" style="display:none;">Desire to improve and grow in the IT world.</h3>
+          <h3 class="es">Resido en Santa Fe, Argentina.</h3>
+          <h3 class="en" style="display:none;">Based in Santa Fe, Argentina.</h3>
+
+						<a href="https://www.linkedin.com/in/ian-pallero-489900258" class=" boton boton-linkedin" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+						<a href="https://github.com/ianpallero03" class="boton boton-cv" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+						<a href="Curriculum_Vitae.pdf" class="boton boton-cv" download><i class="fa-solid fa-file-pdf"></i> Curriculum Vitae</a>
+					
+</section>
+
+
+
+<hr class="separador">
+
+  <!--HABILIDADES-->
+
+
+  <div class="span-3 es">¡Mis Habilidades!</div>
+  <div class="span-3 en" style="display: none;">My Skills</div>  
+<section id="Habilidades">
+      <div class="contenedor-habilidades animado">
+        
+      <ul class="habilidades-lista">
+  <div class="animation-container">
+  <div class="cube">
+
+
+    <div class="cube-face front"><li><i class="fa-brands fa-python icono python"></i> Python</li></div>
+    <div class="cube-face back"><li><i class="fa-solid fa-code icono cpp"></i> C++</li></div>
+    <div class="cube-face right"><li><i class="fa-brands fa-html5 icono html"></i> HTML</li></div>
+    <div class="cube-face left"><li><i class="fa-brands fa-css3-alt icono css"></i> CSS</li></div>
+    <div class="cube-face top"><li><i class="fa-brands fa-github icono github"></i> GitHub</li></div>
+    <div class="cube-face bottom"><li><i class="fa-solid fa-database icono mysql"></i> MySQL</li></ul></div>
+    
+
+      <div class="selector-habilidades">
+
+<!-- Python -->
+<button class="habilidad python es" data-face="front" data-descripcion="Automatización de tareas, scripting y desarrollo de lógica de backend con buen dominio de estructuras de control.">
+  <i class="fa-brands fa-python"></i> Python
+</button>
+
+<button class="habilidad python en" style="display: none;" data-face="front" data-descripcion="Task automation, scripting, and backend logic development using Python.">
+  <i class="fa-brands fa-python"></i> Python
+</button>
+
+<!-- C++ -->
+<button class="habilidad cpp es" data-face="back" data-descripcion="Manejo de programación estructurada y orientación a objetos. Uso en lógica, algoritmos y rendimiento.">
+  <i class="fa-solid fa-code"></i> C++
+</button>
+<button class="habilidad cpp en" style="display: none;" data-face="back" data-descripcion="Structured programming and object-oriented design. Used for logic, algorithms and performance.">
+  <i class="fa-solid fa-code"></i> C++
+</button>
+
+<!-- HTML -->
+<button class="habilidad html es" data-face="right" data-descripcion="Construcción de estructuras web accesibles y semánticas con HTML5.">
+  <i class="fa-brands fa-html5"></i> HTML
+</button>
+<button class="habilidad html en" style="display: none;" data-face="right" data-descripcion="Accessible and semantic web structure with HTML5.">
+  <i class="fa-brands fa-html5"></i> HTML
+</button>
+
+<!-- CSS -->
+<button class="habilidad css es" data-face="left" data-descripcion="Estilización de sitios con CSS3, uso de flexbox, grid y diseño responsivo.">
+  <i class="fa-brands fa-css3-alt"></i> CSS
+</button>
+<button class="habilidad css en" style="display: none;" data-face="left" data-descripcion="Styling websites with CSS3, including flexbox, grid and responsive layout.">
+  <i class="fa-brands fa-css3-alt"></i> CSS
+</button>
+
+<!-- MySQL -->
+<button class="habilidad mysql es" data-face="top" data-descripcion="Diseño y consulta de bases de datos relacionales. Uso de SQL para manipular datos.">
+  <i class="fa-solid fa-database"></i> MySQL
+</button>
+<button class="habilidad mysql en" style="display: none;" data-face="top" data-descripcion="Design and querying of relational databases. Use of SQL for data handling.">
+  <i class="fa-solid fa-database"></i> MySQL
+</button>
+
+<!-- GitHub -->
+<button class="habilidad github es" data-face="bottom" data-descripcion="Gestión de versiones y colaboración en proyectos usando Git y GitHub.">
+  <i class="fa-brands fa-github"></i> GitHub
+</button>
+<button class="habilidad github en" style="display: none;" data-face="bottom" data-descripcion="Version control and project collaboration using Git and GitHub.">
+  <i class="fa-brands fa-github"></i> GitHub
+</button>
+
+  <h5 class="descripcion-habilidades es">
+Estas son algunas de las tecnologías con las que he trabajado y continúo aprendiendo.
+</h5>
+<h5 class="descripcion-habilidades en" style="display: none;">
+These are some of the technologies I've worked with and continue learning.
+</h5>
+
+  </div>
+
+  <div class="reiniciar-container">
+<button id="reiniciar-btn" class="reiniciar-btn" >
+  <i class="es" > Reiniciar rotación</i><i class="en" style="display: none;">Restart rotation</i>
+</button>
+
+</div>
+
+
+<script>
+const cube = document.querySelector(".cube");
+const botones = document.querySelectorAll("[data-face]");
+
+const rotaciones = {
+  front: "rotateX(0deg) rotateY(0deg)",
+  back: "rotateX(0deg) rotateY(180deg)",
+  right: "rotateX(0deg) rotateY(-90deg)",
+  left: "rotateX(0deg) rotateY(90deg)",
+  top: "rotateX(90deg) rotateY(0deg)",
+  bottom: "rotateX(-90deg) rotateY(0deg)"
+};
+
+botones.forEach(boton => {
+  boton.addEventListener("click", () => {
+    const cara = boton.getAttribute("data-face");
+    cube.classList.add("detener-animacion");
+    cube.style.transform = rotaciones[cara];
+  });
+});
+</script>
+<script>
+document.getElementById("reiniciar-btn").addEventListener("click", () => {
+  const cube = document.querySelector(".cube");
+  cube.classList.remove("detener-animacion");
+  cube.removeAttribute("style"); // Quita rotación manual
+});
+</script>
+
+
+  <!--SECCION INGLES Y ESPAÑOL-->
+
+<script>
+  const btn = document.getElementById("idioma-btn");
+
+btn.addEventListener("click", () => {
+  const isEnglish = btn.textContent === "English";
+
+  // Cambiar textos visibles (clases .es y .en)
+  document.querySelectorAll(".en").forEach(el => el.style.display = isEnglish ? "block" : "none");
+  document.querySelectorAll(".es").forEach(el => el.style.display = isEnglish ? "none" : "block");
+
+  // Cambiar los títulos de los botones de contacto
+  document.querySelectorAll(".whatsapp, .gmail-icon").forEach(el => {
+    const titleEs = el.getAttribute("data-title-es");
+    const titleEn = el.getAttribute("data-title-en");
+    el.setAttribute("title", isEnglish ? titleEn : titleEs);
+  });
+
+  // Cambiar texto del botón
+  btn.textContent = isEnglish ? "Spanish" : "English";
+});
+
+</script>
+</section>
+
+
+
+<hr class="separador">
+
+<!-- Seccion proyectos -->
+
+<section id="Proyectos">
+  <h3 class="titulo-proyectos es">¡Proyectos Destacados!</h3>
+  <h3 class="titulo-proyectos en" style="display: none;">¡Featured Projects!</h3>
+
+  <div class="contenedor-proyectos animado">
+
+    <!-- Proyecto 1: Heladería -->
+<div class="tarjeta-proyecto">
+  <div class="preview" style="background-image: url('imagenes/Heladeria.webp');"></div>
+  <div class="contenido-proyecto">
+    <h3>Yo Heladerías</h3>
+    <p class="es texto-corto">
+      Sitio web para heladería/cafetería ficticia, con diseño responsive, menú interactivo, buscador y animaciones.
+    </p>
+    <p class="en texto-corto" style="display: none;">
+      Ice cream and coffee shop site with responsive design, interactive menu, search and animations.
+    </p>
+
+    <div class="texto-extendido" style="display: none;">
+      <p class="es">
+        Me propuse crear una experiencia atractiva, fluida y adaptable a dispositivos, enfocándome tanto en la estética como en la funcionalidad.<br><br>
+        Incluye scroll lateral, filtros por categoría, buscador en tiempo real, carrusel de imágenes y animaciones suaves. Proyecto desarrollado 100% con HTML, CSS y JS puro.
+      </p>
+      <p class="en" style="display: none;">
+        I aimed to build a fluid, mobile-friendly and visually appealing experience.<br><br>
+        Features include side-scroll menu, category filters, live search, image carousel and smooth animations. Built entirely with HTML, CSS and vanilla JS.
+      </p>
+    </div>
+
+    <button class="ver-mas es">Ver más</button>
+<button class="ver-mas en" style="display: none;">See more</button>
+
+    <div class="botones-proyecto">
+      <a href="https://ianpallero03.github.io/Heladeria_YO/" target="_blank">Web</a>
+      <a href="https://github.com/ianpallero03/Heladeria_YO" target="_blank">GitHub</a>
+    </div>
+  </div>
+</div>
+
+<!-- Proyecto 2: Venta de Autos -->
+<div class="tarjeta-proyecto">
+  <div class="preview" style="background-image: url('imagenes/autos.webp');"></div>
+  <div class="contenido-proyecto animado">
+    <h3>Venta de Autos</h3>
+    <p class="es texto-corto">
+      Plantilla de concesionaria con slider de autos, simulador de financiación, testimonios y formulario.
+    </p>
+    <p class="en texto-corto" style="display: none;">
+      Car dealership template with slider, financing simulator, testimonials and contact form.
+    </p>
+
+    <div class="texto-extendido" style="display: none;">
+      <p class="es">
+        Proyecto no comercial orientado a practicar diseño web adaptable. Usé HTML, CSS y JavaScript puro. Los autos son genéricos; el foco fue la estructura y usabilidad.<br><br>
+        El diseño incluye animaciones, secciones destacadas y navegación optimizada para todos los dispositivos.
+      </p>
+      <p class="en" style="display: none;">
+        A non-commercial project focused on responsive layout practice using HTML, CSS and vanilla JS. Cars are generic; the focus was structure and UX.<br><br>
+        Includes animations, featured sections and optimized navigation for all screens.
+      </p>
+    </div>
+
+    <button class="ver-mas es">Ver más</button>
+    <button class="ver-mas en" style="display: none;">See more</button>
+
+    <div class="botones-proyecto">
+      <a href="https://ianpallero03.github.io/Venta_de_autos/" target="_blank">Web</a>
+      <a href="https://github.com/ianpallero03/Venta_de_autos" target="_blank">GitHub</a>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Proyecto 3: Clima -->
+<div class="tarjeta-proyecto">
+  <div class="preview" style="background-image: url('imagenes/clima1.webp');"></div>
+  <div class="contenido-proyecto animado">
+    <h3>Weather App</h3>
+    <p class="es texto-corto">
+      Aplicación web del clima con búsqueda por ciudad, visualización del clima actual, humedad y fecha. Incluye historial interactivo y fondo dinámico según el clima.
+    </p>
+    <p class="en texto-corto" style="display: none;">
+      Weather web app with city search, current temperature, humidity and date display. Includes interactive search history and dynamic background based on weather.
+    </p>
+
+    <!-- Texto extendido -->
+    <div class="texto-extendido" style="display: none;">
+      <p class="es">
+        Este proyecto fue creado con JavaScript puro, HTML5 y CSS3, utilizando la API de OpenWeatherMap para obtener los datos climáticos.<br><br>
+        Implementa animaciones suaves, almacenamiento de historial en localStorage, y cambios automáticos de fondo según la condición meteorológica detectada (nublado, lluvia, sol, etc.).<br><br>
+        El diseño es limpio, responsivo y enfocado en brindar una experiencia visual atractiva y funcional.
+      </p>
+      <p class="en" style="display: none;">
+        This project was built using vanilla JavaScript, HTML5, and CSS3, powered by the OpenWeatherMap API to fetch weather data.<br><br>
+        It features smooth animations, search history stored in localStorage, and automatic background changes depending on the weather condition (clouds, rain, sun, etc.).<br><br>
+        The design is clean, responsive, and focused on delivering a visually appealing and functional experience.
+      </p>
+    </div>
+    
+    <button class="ver-mas es">Ver más</button>
+    <button class="ver-mas en" style="display: none;">See more</button>
+
+    <div class="botones-proyecto">
+      <a href="https://ianpallero03.github.io/weather-app/" target="_blank">Web</a>
+      <a href="https://github.com/IanPallero03/weather-app" target="_blank">GitHub</a>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Proyecto 5: Lista de tareas -->
+<div class="tarjeta-proyecto">
+  <div class="preview" style="background-image: url('imagenes/Lista.webp');"></div>
+  <div class="contenido-proyecto animado">
+    <h3>Lista de tareas</h3>
+    
+    <!-- Texto corto -->
+    <p class="es texto-corto">
+      Aplicación web de lista de tareas con historial, modo noche/día y almacenamiento local. Permite agregar, editar y marcar tareas como completadas de forma sencilla.
+    </p>
+    <p class="en texto-corto" style="display: none;">
+      To-Do web app with history, dark/light mode, and local storage. Allows easy adding, editing, and marking tasks as completed.
+    </p>
+
+    <!-- Texto extendido -->
+    <div class="texto-extendido" style="display: none;">
+      <p class="es">
+        Este proyecto fue creado con JavaScript puro, HTML5 y CSS3.<br><br>
+        Permite agregar, editar, eliminar y marcar tareas como completadas, con un contador de tareas pendientes y un historial interactivo que se guarda en localStorage para recuperarlas fácilmente.<br><br>
+        Incluye un modo noche/día para una experiencia cómoda, un fondo con video dinámico para practicar manejo multimedia y un diseño responsivo adaptable a computadoras y dispositivos móviles.
+      </p>
+      <p class="en" style="display: none;">
+        This project was built using vanilla JavaScript, HTML5, and CSS3.<br><br>
+        It allows adding, editing, deleting, and marking tasks as completed, with a pending tasks counter and an interactive history stored in localStorage for easy retrieval.<br><br>
+        Includes a dark/light mode for comfortable use, a dynamic video background to practice multimedia handling, and a responsive design suitable for desktop and mobile devices.
+      </p>
+    </div>
+
+    <button class="ver-mas es">Ver más</button>
+    <button class="ver-mas en" style="display: none;">See more</button>
+
+    <div class="botones-proyecto">
+      <a href="https://ianpallero03.github.io/Lista_de_tareas/" target="_blank">Web</a>
+      <a href="https://github.com/IanPallero03/Lista_de_tareas" target="_blank">GitHub</a>
+    </div>
+  </div>
+</div>
+
+<!-- Proyecto 6: El charquito de Ela -->
+<div class="tarjeta-proyecto">
+  <div class="preview" style="background-image: url('imagenes/charquito.webp');"></div>
+  <div class="contenido-proyecto animado">
+    <h3>El charquito de Ela</h3>
+    
+    <!-- Texto corto -->
+    <p class="es texto-corto">
+      Sitio web interactivo sobre lectura y alfabetización, con estética cálida, botón para personas con daltonismo, animaciones y formularios funcionales. Diseñado para invitar a leer y participar en proyectos culturales.
+    </p>
+    <p class="en texto-corto" style="display: none;">
+      Interactive website about reading and literacy, featuring a warm aesthetic, button for people with color blindness, animations, and functional forms. Designed to invite reading and cultural projects participation.
+    </p>
+
+    <!-- Texto extendido -->
+    <div class="texto-extendido" style="display: none;">
+      <p class="es">
+        Este proyecto está diseñado con JavaScript puro, HTML5 y CSS3, y busca acercar la lectura a la comunidad de forma accesible y atractiva.<br><br>
+        Cuenta con botón para personas con daltonismo, una animación de ranita que salta, burbujas flotantes en el fondo, y un formulario de contacto funcional conectado con Formspree para facilitar la comunicación.<br><br>
+        Incluye un diseño adaptable a dispositivos móviles, efectos de transición suaves y un enfoque visual que busca generar curiosidad por la lectura, ideal para bibliotecas, escuelas y proyectos de alfabetización.
+      </p>
+      <p class="en" style="display: none;">
+        This project was built using vanilla JavaScript, HTML5, and CSS3, aiming to bring reading closer to the community in an accessible and attractive way.<br><br>
+        It has a button for people with color blindness, a jumping frog animation, floating bubbles in the background, and a functional contact form connected with Formspree for easy communication.<br><br>
+        Includes a responsive design for mobile devices, smooth transitions, and a visual approach to spark curiosity for reading, making it ideal for libraries, schools, and literacy projects.
+      </p>
+    </div>
+
+    <button class="ver-mas es">Ver más</button>
+    <button class="ver-mas en" style="display: none;">See more</button>
+
+    <div class="botones-proyecto">
+      <a href="https://ianpallero03.github.io/ElCharquitodeEla/" target="_blank">Web</a>
+      <a href="https://github.com/IanPallero03/ElCharquitodeEla" target="_blank">GitHub</a>
+    </div>
+  </div>
+</div>
+
+
+</section>
+<script>
+  document.querySelectorAll(".ver-mas").forEach(boton => {
+    boton.addEventListener("click", () => {
+      const tarjeta = boton.closest(".tarjeta-proyecto");
+      const extra = tarjeta.querySelector(".texto-extendido");
+      const mostrar = extra.style.display !== "block";
+      
+
+      // Mostrar u ocultar el texto extendido
+      extra.style.display = mostrar ? "block" : "none";
+
+      // Cambiar el texto de todos los botones "ver más / menos" en ambos idiomas
+      const botonesRelacionados = tarjeta.querySelectorAll(".ver-mas");
+      botonesRelacionados.forEach(b => {
+        b.textContent = b.classList.contains("es")
+          ? (mostrar ? "Ver menos" : "Ver más")
+          : (mostrar ? "See less" : "See more");
+      });
+    });
+  });
+  
+</script>
+
+<hr class="separador">
+
+<div class="span-4 es">¡Sobre Mi!</div>
+  <div class="span-4 en" style="display: none;">¡About Me!</div>  
+<section id="Sobre Mí"> 
+  
+  <div class="timeline animado">
+    <div class="evento">
+      <h3 class="año"><i class="fa-solid fa-graduation-cap"></i> 2018</h3>
+
+      <p class="es">Comencé la carrera de Ingeniería en Informática en la Universidad Nacional del Litoral. En la cual aprendi a programar en C++.</p>
+      <p class="en" style="display: none;">I began my degree in Computer Science at the National University of Litoral, where I learned to program in C++.</p>
+    </div>
+
+    <div class="evento">
+      <h3 class="año"><i class="fa-solid fa-database"></i> 2022</h3>
+      <p class="es">Realice cursos de MySQL, Git y trabajo colaborativo profesional.</p>
+      <p class="en" style="display: none;">Take courses in MySQL, Git, and professional collaborative work.</p>
+    </div>
+
+    <div class="evento">
+      <h3 class="año"><i class="fa-brands fa-python icono python"></i> 2022</h3>
+      <p class="es">Curso de Python con frameworks como Django y Flask.</p>
+      <p class="en" style="display: none;">Python course with frameworks such as Django and Flask.</p>
+    </div>
+
+    <div class="evento">
+      <h3 class="año"><i class="fa-brands fa-html5 icono html"></i> 2023</h3>
+      <p class="es">Curso de desarrollo web con HTML5, CSS3 y JavaScript.</p>
+      <p class="en" style="display: none;">Web development course with HTML5, CSS3 and JavaScript.</p>
+    </div>
+
+    <div class="evento">
+      <h3 class="año"><i class="fa-solid fa-book-open-reader"></i> 2024</h3>
+      <p class="es">Inicié el estudio autodidacta de inglés (nivel intermedio).</p>
+       <p class="en" style="display: none;">I started self-taught English (intermediate level).</p>
+    </div>
+    <div class="evento">
+      <h3 class="año"><i class="fa-solid fa-laptop-code"></i> 2025</h3>
+      <p class="es">Desarrollé mi portafolio web y comencé a postularme para trabajos IT.</p>
+      <p class="en" style="display: none;">I developed my web portfolio and started applying for IT jobs.</p>
+    </div>
+      <p class="es" style="text-align: center; margin-top: 2rem;">
+        Este recorrido me motivó a seguir aprendiendo día a día. Hoy busco oportunidades para comenzar mi camino profesional en el mundo IT.
+      </p>
+      <p class="en" style="display: none; text-align: center; margin-top: 2rem;">
+        This journey inspired me to keep learning every day. I’m currently looking for opportunities to start my professional path in the IT field.
+      </p>
+      
+
+</section>
+
+   <!-- SECCION ANIMADO-->
+
+   <script>
+    const animados = document.querySelectorAll('.animado');
+  
+    function mostrarAnimados() {
+      animados.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        const alturaPantalla = window.innerHeight;
+  
+        if (top < alturaPantalla - 100) {
+          el.classList.add('visible');
+        }
+      });
+    }
+  
+    window.addEventListener('scroll', mostrarAnimados);
+    window.addEventListener('load', mostrarAnimados); // por si ya están en pantalla
+  </script>
+
+
+  <!-- SECCION CONTACTO Y FOOTER -->
+
+  <hr class="separador">
+	<footer>
+  <section>
+
+    <form id="formulario-contacto" class="formulario" action="https://formspree.io/f/mwpbjole" method="POST">
+      <fieldset>
+        <legend class="es">Contactame llenando los siguientes campos</legend>
+        <legend class="en" style="display: none;">Contact me by filling out the following fields</legend>
+        <section id="Contacto">
+          <div class="contenedor-campos">
+            <div class="campo">
+              <label class="es">Nombre</label>
+              <label class="en" style="display: none;">Name</label>
+              <input class="input-text" name="name" type="text" placeholder="Tu Nombre / Your Name" required>
+            </div>
+    
+            <div class="campo">
+              <label class="es">Número de teléfono</label>
+              <label class="en" style="display: none;">Phone number</label>
+              <input class="input-text" name="phone" type="tel" placeholder="Tu Número / Your Number">
+            </div>
+    
+            <div class="campo">
+              <label class="es">Correo</label>
+              <label class="en" style="display: none;">Email</label>
+              <input class="input-text" name="email" type="email" placeholder="Tu Correo / Your Email" required>
+            </div>
+    
+            <div class="campo">
+              <label class="es">Mensaje</label>
+              <label class="en" style="display: none;">Message</label>
+              <textarea class="input-text" name="message" required></textarea>
+            </div>
+          </div>
+    
+          <div class="alinear-derecha">
+            <button type="submit" class="boton-enviar">Enviar / Send</button>
+          </div>
+        </section>
+      </fieldset>
+    </form>
+    
+
+    <script>
+      const formulario = document.getElementById('formulario-contacto');
+      
+      formulario.addEventListener('submit', function(e) {
+        e.preventDefault(); // Previene el envío automático
+      
+        const datos = new FormData(formulario);
+      
+        fetch(formulario.action, {
+          method: formulario.method,
+          body: datos,
+          headers: {
+            'Accept': 'application/json'
+          }
+        }).then(response => {
+          if (response.ok) {
+            alert("✅ Tu mensaje fue enviado correctamente.");
+            formulario.reset();
+          } else {
+            alert("❌ Hubo un error al enviar tu mensaje.");
+          }
+        });
+      });
+      </script>
+      
+
+      <!-- Botones de contacto flotantes -->
+<!-- Botones de contacto flotantes -->
+
+<div class="botones-contacto">
+  <a href="https://wa.me/3425376255" class="whatsapp"
+     data-title-es="Enviar WhatsApp"
+     data-title-en="Send WhatsApp"
+     title="Enviar WhatsApp"
+     target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <a href="mailto:ianpallero@gmail.com" class="gmail-icon"
+     data-title-es="Enviar Correo"
+     data-title-en="Send Email"
+     title="Enviar correo"
+     target="_blank">
+     <i class="fa-solid fa-envelope"></i>
+  </a>
+</div>
+    </form>
+  </section>
+  <p class="es">© Copyright Ian Marco Pallero. Todos los derechos reservados.</p>
+  <p class="en" style="display: none;">© Copyright Ian Marco Pallero. All rights reserved.</p>
+
+
+</footer>
+<script>
+ 
+</script>
+</body>
+</html>
