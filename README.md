@@ -31,7 +31,7 @@ Si encontrás algo para mejorar, ¡tus sugerencias son bienvenidas! 🙌
 
 ## 🌐 Demo
 
-Podés ver mi portafolio online aquí: [Ver Portafolio](https://ianpallero03.github.io/Portafolio/)](https://ianpallero03.github.io/Mi_Portafolio/)
+Podés ver mi portafolio online aquí: [Ver Portafolio](https://ianpallero03.github.io/Mi_Portafolio/)
 
 ## 💻 Cómo clonar y probar
 
