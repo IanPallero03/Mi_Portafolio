@@ -126,7 +126,7 @@ span{
   font-size: 2rem;
   color: white;
   padding: 2rem;
-  animation: typing 4s steps(24), blink 0.5s infinite step-end alternate;
+  animation: typing 4s steps(15), blink 0.5s infinite step-end alternate;
   overflow: hidden;
   margin: 0 auto; /* ✅ centra horizontalmente */
   text-align: center;
@@ -1611,4 +1611,5 @@ footer p {
 	text-align: center;
 	padding: 20px;
 }
+
 
